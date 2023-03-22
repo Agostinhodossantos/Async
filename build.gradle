@@ -1,0 +1,29 @@
+buildscript {
+
+    ext {
+        hilt_version = '2.44.2'
+        coroutines_version = "1.6.1"
+        google_services = '4.3.13'
+        timber =  "5.0.1"
+        livedata = "2.4.1"
+        work = "2.7.1"
+        room_version = "2.5.0-alpha02"
+    }
+
+    repositories{
+        jcenter()
+        maven { url "https://jitpack.io" }
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.4.1' apply false
+    id 'com.android.library' version '7.4.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+}
